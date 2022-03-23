@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <title></title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .product-detail
+        {   
+          position: absolute;
+          width: 300px;
+          right: 0;
+          padding: 24px;
+          box-sizing: border-box;
+        }
+        .title__container
+        {
+            display: flex;
+        }
+        .title__container img
+        {
+            transform:rotate(180deg);
+            margin-right: 14px;
+        }
+        .title
+        {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .shopping__cart
+        {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .shopping__cart figure
+        {
+            margin: 0;
+        }
+        .shopping__cart figure img
+        {
+            width: 70px;
+            height: 70px;
+            border-radius:20px;
+            object-fit: cover;
+        }
+        .shopping__cart p:nth-child(2)
+        {
+            color:var(--very-light-pink);
+        }
+        .shopping__cart p:nth-child(3)
+        {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .header__cart
+        {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items:center;
+            gap: 16px;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+        .header__cart p:nth-child(1)
+        {
+            display: flex;
+            flex-direction: column;  
+        }
+        .header__cart p:nth-child(2)
+        {
+            justify-self: end;
+            font-weight: 600;  
+        }
+        .header__cart p span:nth-child(1)
+        {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .primary-button
+        {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border:none;
+            color:var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        @media(max-width: 640px)
+        {
+            .product-detail
+            {
+                width: 100%;
+            }
+        }
+        </style>
+</head>
+
+<body>
+    <aside class="product-detail">
+        <div class="title__container">
+            <img src="./img/icons/flechita.svg" alt="arrow">
+            <p class="title">My order</p>
+        </div>
+        <div class="my__order__content">
+            <div class="shopping__cart">
+                <figure>
+                    <img src="./img/bike.png" alt="">
+                </figure>
+                <p>Bike</p>
+                <p>$80,00</p>
+                <img src="./img/icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping__cart">
+            <figure>
+                <img src="./img/bike.png" alt="">
+            </figure>
+            <p>Bike</p>
+            <p>$80,00</p>
+            <img src="./img/icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping__cart">
+            <figure>
+                <img src="./img/bike.png" alt="">
+            </figure>
+            <p>Bike</p>
+            <p>$80,00</p>
+            <img src="./img/icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping__cart">
+            <figure>
+                <img src="./img/bike.png" alt="">
+            </figure>
+            <p>Bike</p>
+            <p>$80,00</p>
+            <img src="./img/icons/icon_close.png" alt="">
+        </div>
+        <div class="header__cart">
+            <p>
+                <span>Total</span>
+            </p>
+            <p>$560</p>
+        </div>
+        <button class="primary-button add-to-cart-button">      
+            Checkout
+        </button>
+    </div>
+    
+</aside> 
+</body>
+
+</html>
